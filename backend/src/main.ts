@@ -1,36 +1,25 @@
 import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import { json } from 'express';
-import helmet from 'helmet';
+import { ExpressAdapter, NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
+import express from 'express';
 
-async function bootstrap() {
-  // Se desactiva el body parser por defecto para imponer un límite de tamaño propio.
-  const app = await NestFactory.create(AppModule, { bodyParser: false });
-  const config = app.get(ConfigService);
+// 1. Crea una instancia de Express
+const server = express();
 
-  // Cabeceras HTTP de seguridad (CSP, HSTS, X-Frame-Options, nosniff, etc.).
-  app.use(helmet());
-
-  // Limita el tamaño del cuerpo JSON: el formulario de contacto no necesita más
-  // (el DTO ya acota el mensaje a 2000 caracteres). Mitiga payloads abusivos.
-  app.use(json({ limit: '16kb' }));
-
-  app.setGlobalPrefix('api');
-  app.useGlobalPipes(
-    new ValidationPipe({
-      whitelist: true,
-      forbidNonWhitelisted: true,
-      transform: true,
-    }),
+export async function createNestServer(expressInstance: express.Express) {
+  const app = await NestFactory.create<NestExpressApplication>(
+    AppModule,
+    new ExpressAdapter(expressInstance),
   );
-  app.enableCors({
-    origin: config.get<string>('FRONTEND_ORIGIN', 'https://cristiannavarro-github-io.vercel.app:5173'),
-    methods: ['POST'],
-  });
-
-  const port = config.get<number>('PORT', 3000);
-  await app.listen(port);
+  
+  app.enableCors(); // Habilita CORS si lo necesitas
+  await app.init();
+  return app;
 }
-void bootstrap();
+
+// 2. Ejecuta el servidor localmente como siempre
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  await app.listen(process.env.PORT ?? 3000);
+}
+bootstrap();
