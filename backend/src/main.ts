@@ -26,7 +26,7 @@ async function bootstrap() {
     }),
   );
   app.enableCors({
-    origin: config.get<string>('FRONTEND_ORIGIN', 'http://localhost:5173'),
+    origin: config.get<string>('FRONTEND_ORIGIN', 'https://cristiannavarro-github-io.vercel.app:5173'),
     methods: ['POST'],
   });
 
