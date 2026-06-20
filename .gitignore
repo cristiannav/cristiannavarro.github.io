@@ -10,3 +10,4 @@ coverage/
 .vscode
 .git
 skills-lock.json
+.vercel

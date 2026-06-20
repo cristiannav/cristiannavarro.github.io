@@ -25,12 +25,20 @@ export function Contact() {
   }
 
   return (
-    <Section id="contact" eyebrow="Hablemos" title="Contacto">
+    <Section id="contact">
       <div className="grid items-stretch gap-10 md:grid-cols-2">
-        <form
-          onSubmit={handleSubmit}
-          className="glass space-y-4 rounded-2xl p-6"
-        >
+        {/* Encabezado + formulario: debajo del globo en mobile, izquierda en desktop */}
+        <div className="order-2 md:order-1">
+          <p className="mb-2 text-sm font-medium uppercase tracking-widest text-neon-cyan">
+            Hablemos
+          </p>
+          <h2 className="mb-8 text-3xl font-bold text-white sm:text-4xl">
+            Contacto
+          </h2>
+          <form
+            onSubmit={handleSubmit}
+            className="glass space-y-4 rounded-2xl p-6"
+          >
           <div>
             <label htmlFor="contact-name" className="sr-only">
               Nombre
@@ -94,8 +102,10 @@ export function Contact() {
           {status === "error" && (
             <p className="text-sm text-red-400">{error}</p>
           )}
-        </form>
-        <div className="min-h-[360px] md:min-h-0">
+          </form>
+        </div>
+        {/* Globo: arriba en mobile, derecha en desktop */}
+        <div className="order-1 min-h-[360px] md:order-2 md:min-h-0">
           <EarthCanvas />
         </div>
       </div>
