@@ -14,7 +14,7 @@ export const skills: SkillCategory[] = [
   { category: 'Frontend', items: ['HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'TypeScript', 'React'] },
   { category: 'Backend', items: ['Node JS', 'Express JS', 'Nest JS', 'Python', 'Java'] },
   { category: 'Bases de datos', items: ['SQL Server', 'MySQL'] },
-  { category: 'Sistemas operativos', items: ['GNU/Linux Debian', 'Red Hat'] },
+  { category: 'Sistemas operativos', items: ['GNU/Linux', 'Debian', 'Red Hat'] },
   { category: 'Herramientas', items: ['Visual Studio Code', 'IntelliJ IDEA', 'Claude Code', 'Postman', 'Git', 'Docker', 'Jenkins'] },
 ];
 
