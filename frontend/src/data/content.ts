@@ -65,7 +65,7 @@ export const experience: Experience[] = [
       'Soporte en servidores Red Hat 6.5 en distintos ambientes y análisis de logs.',
       'Metodologías Scrum y Kanban; documentación de soluciones.',
     ],
-    stack: ['GNU/Linux Debian', 'Red Hat', 'Docker', 'TCP/IP', 'Jira'],
+    stack: ['GNU/Linux','Debian', 'Red Hat', 'Docker', 'TCP/IP', 'Jira'],
   },
   {
     company: 'Sonda',
