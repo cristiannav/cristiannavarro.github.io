@@ -30,7 +30,7 @@ export const experience: Experience[] = [
       'Sistema de detección temprana de altas médicas para optimizar recursos hospitalarios y la calidad del servicio.',
       'ABM de teléfono para prestadores mediante un chatbot en WhatsApp.',
     ],
-    stack: ['React', 'Node JS', 'Express JS', 'Nest JS', 'Java', 'SQL Server', 'Docker', 'Jenkins', 'Red Hat OpenShift'],
+    stack: ['React', 'TypeScript', 'Node JS', 'Express JS', 'Nest JS', 'Java', 'SQL Server', 'Docker', 'Jenkins', 'Red Hat OpenShift'],
   },
   {
     company: 'Erictel Argentina',
@@ -42,7 +42,7 @@ export const experience: Experience[] = [
       'Instalación y virtualización LAMP para desarrollo local.',
       'Trabajo con metodologías ágiles, pruebas y documentación de soluciones.',
     ],
-    stack: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'React'],
+    stack: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'jQuery', 'React'],
   },
   {
     company: 'Innovation Experience Israel',
