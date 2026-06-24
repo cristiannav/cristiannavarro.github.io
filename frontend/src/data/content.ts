@@ -42,7 +42,7 @@ export const experience: Experience[] = [
       'Instalación y virtualización LAMP para desarrollo local.',
       'Trabajo con metodologías ágiles, pruebas y documentación de soluciones.',
     ],
-    stack: ['React', 'JavaScript', 'jQuery', 'PHP', 'MySQL'],
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'React'],
   },
   {
     company: 'Innovation Experience Israel',
