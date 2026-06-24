@@ -14,8 +14,8 @@ export const skills: SkillCategory[] = [
   { category: 'Frontend', items: ['HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'TypeScript', 'React'] },
   { category: 'Backend', items: ['Node JS', 'Express JS', 'Nest JS', 'Python', 'Java'] },
   { category: 'Bases de datos', items: ['SQL Server', 'MySQL'] },
-  { category: 'Sistemas operativos', items: ['Debian', 'Red Hat'] },
-  { category: 'Herramientas', items: ['VS Code', 'IntelliJ IDEA', 'Claude Code', 'Postman', 'Git', 'Docker', 'Jenkins'] },
+  { category: 'Sistemas operativos', items: ['GNU/Linux Debian', 'Red Hat'] },
+  { category: 'Herramientas', items: ['Visual Studio Code', 'IntelliJ IDEA', 'Claude Code', 'Postman', 'Git', 'Docker', 'Jenkins'] },
 ];
 
 export const experience: Experience[] = [
@@ -65,7 +65,7 @@ export const experience: Experience[] = [
       'Soporte en servidores Red Hat 6.5 en distintos ambientes y análisis de logs.',
       'Metodologías Scrum y Kanban; documentación de soluciones.',
     ],
-    stack: ['Debian', 'Red Hat', 'Docker', 'TCP/IP', 'Jira'],
+    stack: ['GNU/Linux Debian', 'Red Hat', 'Docker', 'TCP/IP', 'Jira'],
   },
   {
     company: 'Sonda',
@@ -75,7 +75,7 @@ export const experience: Experience[] = [
     bullets: [
       'Creación y administración de tickets; soporte de primer y segundo nivel, remoto y on-site.',
       'Administración de contraseñas mediante Novell y Active Directory.',
-      'Diagnóstico con Process Monitor y documentación de soluciones.',
+      'Diagnóstico de errores con la herramienta Process Monitor y documentación de soluciones.',
     ],
     stack: ['Windows', 'Active Directory', 'Novell'],
   },
@@ -114,7 +114,7 @@ export const projects: Project[] = [
 
 export const education: Education[] = [
   { institution: 'Universidad Argentina de la Empresa (UADE)', title: 'Lic. en Gestión de Tecnología de la Información', period: 'Mar 2019 — Actualidad' },
-  { institution: 'Digital House', title: 'React', period: 'Feb 2018 — Abr 2018' },
+  { institution: 'Digital House', title: 'React JS', period: 'Feb 2018 — Abr 2018' },
   { institution: 'Digital House', title: 'Desarrollo Web Full Stack', period: 'Jul 2017 — Dic 2017' },
   { institution: 'Universidad Tecnológica Nacional (UTN)', title: 'Tecnicatura Superior en Programación', period: 'Mar 2014 — Dic 2015' },
   { institution: 'Academia Proydesa', title: 'Administración Avanzada en Linux', period: 'Nov 2013 — Mar 2014' },
