@@ -38,7 +38,7 @@ export const experience: Experience[] = [
     period: 'Sept 2018 — May 2019',
     location: 'CABA',
     bullets: [
-      'Desarrollo del sistema DashPro para dispositivos IoT en agroindustria.',
+      'Desarrollo del sistema DashPro para monitorear el uso de dispositivos IoT en el sector de la agroindustria.',
       'Instalación y virtualización LAMP para desarrollo local.',
       'Trabajo con metodologías ágiles, pruebas y documentación de soluciones.',
     ],
