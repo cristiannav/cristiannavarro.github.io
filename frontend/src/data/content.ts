@@ -16,7 +16,7 @@ export const skills: SkillCategory[] = [
   { category: 'Bases de datos', items: ['SQL Server', 'MySQL'] },
   { category: 'Sistemas operativos', items: ['GNU/Linux', 'Debian', 'Red Hat'] },
   { category: 'Herramientas', items: ['Visual Studio Code', 'IntelliJ IDEA', 'Claude Code', 'Postman', 'Git', 'Docker', 'Jenkins'] },
-  { category: 'Metodologías ágiles', items: ['Scrum', 'Kanvan'] },
+  { category: 'Metodologías ágiles', items: ['Scrum', 'Kanban'] },
 ];
 
 export const experience: Experience[] = [
