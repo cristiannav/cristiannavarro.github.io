@@ -26,7 +26,7 @@ export const experience: Experience[] = [
     period: 'Sept 2019 — Ago 2025',
     location: 'CABA',
     bullets: [
-      'Desarrollo de mejoras y de nuevos requerimientos en el sistema SMG Parking, aplicación para registrar las entradas y salidas de los vehículos en los sanatorios propios de la compañía.',
+      'Desarrollo de mejoras y de nuevos requerimientos en SMG Parking, app de registro de entradas/salidas de vehículos en los sanatorios.',
       'Implementación del sistema Score NEWS: mapa de camas con nivel de riesgo clínico y estado COVID-19 para una atención más ágil.',
       'Desarrollo de sistema de detección temprana de altas médicas para optimizar recursos hospitalarios y la calidad del servicio.',
       'Desarrollo de ABM de teléfono para prestadores mediante un chatbot en WhatsApp.',
