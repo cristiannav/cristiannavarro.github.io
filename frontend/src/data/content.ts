@@ -26,10 +26,10 @@ export const experience: Experience[] = [
     period: 'Sept 2019 — Ago 2025',
     location: 'CABA',
     bullets: [
-      'Mejoras y nuevos requerimientos en SMG Parking, app de registro de entradas/salidas de vehículos en los sanatorios.',
+      'Desarrollo de mejoras y de nuevos requerimientos en el sistema SMG Parking, aplicación para registrar las entradas y salidas de los vehículos en los sanatorios propios de la compañía.',
       'Implementación del sistema Score NEWS: mapa de camas con nivel de riesgo clínico y estado COVID-19 para una atención más ágil.',
-      'Sistema de detección temprana de altas médicas para optimizar recursos hospitalarios y la calidad del servicio.',
-      'ABM de teléfono para prestadores mediante un chatbot en WhatsApp.',
+      'Desarrollo de sistema de detección temprana de altas médicas para optimizar recursos hospitalarios y la calidad del servicio.',
+      'Desarrollo de ABM de teléfono para prestadores mediante un chatbot en WhatsApp.',
     ],
     stack: ['React', 'TypeScript', 'Node JS', 'Express JS', 'Nest JS', 'Java', 'SQL Server', 'Docker', 'Jenkins', 'Red Hat OpenShift'],
   },
