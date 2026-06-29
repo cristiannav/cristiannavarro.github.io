@@ -27,7 +27,7 @@ export const experience: Experience[] = [
     location: 'CABA',
     bullets: [
       'Desarrollo de mejoras y de nuevos requerimientos en SMG Parking, app de registro de entradas/salidas de vehículos en los sanatorios.',
-      'Implementación del sistema Score NEWS: mapa de camas con nivel de riesgo clínico y estado COVID-19 para una atención más ágil.',
+      'Implementación del sistema Score NEWS: mapa de camas con nivel de riesgo clínico y estado de COVID-19 para una atención más ágil.',
       'Desarrollo de sistema de detección temprana de altas médicas para optimizar recursos hospitalarios y la calidad del servicio.',
       'Desarrollo de ABM de teléfono para prestadores mediante un chatbot en WhatsApp.',
     ],
@@ -92,7 +92,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Score NEWS',
-    description: 'Mapa de camas que permite a médicos y enfermeros conocer el nivel de riesgo clínico del paciente internado y su estado COVID-19.',
+    description: 'Mapa de camas que permite a médicos y enfermeros conocer el nivel de riesgo clínico del paciente internado y su estado de COVID-19.',
     impact: 'Atención clínica más ágil y priorizada en plena pandemia.',
     stack: ['React', 'Node JS', 'Express JS', 'SQL Server'],
     image: '/images/score-news.jpg',
