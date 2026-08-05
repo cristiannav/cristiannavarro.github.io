@@ -32,7 +32,7 @@ export function About() {
           <dl className="space-y-4 text-sm">
             <div>
               <dt className="text-slate-400">Experiencia</dt>
-              <dd className="text-white">+6 años como Full Stack Developer</dd>
+              <dd className="text-white">+6 años como desarrollador</dd>
             </div>
             <div>
               <dt className="text-slate-400">En TI</dt>
