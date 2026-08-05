@@ -2,12 +2,12 @@ import type { Profile, SkillCategory, Experience, Project, Education } from './t
 
 export const profile: Profile = {
   name: 'Cristian Navarro',
-  role: 'Senior Software Engineer',
+  role: 'Full Stack Developer',
   location: 'Buenos Aires — Argentina',
   github: 'https://github.com/cristiannav',
   linkedin: 'https://linkedin.com/in/cristian-navarro',
   summary:
-    'Más de 6 años de experiencia como ingeniero de software y más de 10 años en el sector de TI. Participé en múltiples proyectos de ingeniería de software creando aplicaciones propias de las compañías desde cero, y en soporte de aplicaciones sobre servidores Linux en distintos ambientes, siempre con metodologías ágiles. Analítico y detallista, orientado al dinamismo y a la gestión oportuna de procesos alineados con la estrategia del negocio.',
+    'Más de 6 años de experiencia como Full Stack Developer y más de 10 años en el sector de TI. Participé en múltiples proyectos de ingeniería de software creando aplicaciones propias de las compañías desde cero, y en soporte de aplicaciones sobre servidores Linux en distintos ambientes, siempre con metodologías ágiles. Analítico y detallista, orientado al dinamismo y a la gestión oportuna de procesos alineados con la estrategia del negocio.',
 };
 
 export const skills: SkillCategory[] = [

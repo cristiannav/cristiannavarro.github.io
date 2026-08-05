@@ -1,15 +1,20 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigService } from '@nestjs/config';
-import { InternalServerErrorException } from '@nestjs/common';
+import { InternalServerErrorException, Logger } from '@nestjs/common';
 import { MailService } from './mail.service';
 
 describe('MailService', () => {
   let service: MailService;
   const fetchMock = jest.fn();
+  let loggerErrorSpy: jest.SpyInstance;
 
   beforeEach(async () => {
     fetchMock.mockReset();
     global.fetch = fetchMock;
+    // Silencia el log de error esperado para no ensuciar la salida de los tests.
+    loggerErrorSpy = jest
+      .spyOn(Logger.prototype, 'error')
+      .mockImplementation(() => undefined);
     const configValues: Record<string, string> = {
       RESEND_API_KEY: 'test-key',
       CONTACT_TO: 'to@test',
@@ -24,6 +29,10 @@ describe('MailService', () => {
       ],
     }).compile();
     service = module.get<MailService>(MailService);
+  });
+
+  afterEach(() => {
+    loggerErrorSpy.mockRestore();
   });
 
   it('posts the contact data to Resend with auth and reply-to', async () => {
@@ -71,5 +80,6 @@ describe('MailService', () => {
         message: 'Hola mundo test',
       }),
     ).rejects.toBeInstanceOf(InternalServerErrorException);
+    expect(loggerErrorSpy).toHaveBeenCalled();
   });
 });
