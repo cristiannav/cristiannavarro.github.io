@@ -185,7 +185,7 @@ export const education: Education[] = [
     period: "Mar 2014 — Dic 2015",
   },
   {
-    institution: "Academia Proydesa",
+    institution: "Fundación Proydesa",
     title: "Administración Avanzada en Linux",
     period: "Nov 2013 — Mar 2014",
   },
