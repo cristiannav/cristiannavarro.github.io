@@ -128,6 +128,14 @@ export const experience: Experience[] = [
 
 export const projects: Project[] = [
   {
+    title: "SwapStyle",
+    description:
+      "Aplicación de swap donde matcheas con personas que tienen prendas que te interesan y viceversa.",
+    impact: "https://swapstyle-prod.vercel.app",
+    stack: ["React", "Tailwind CSS", "Node JS", "NestJS", "PostgreSQL"],
+    image: "/images/swapstyle.png",
+  },
+  {
     title: "SMG Parking",
     description:
       "Aplicación para registrar entradas y salidas de vehículos en los sanatorios propios de la compañía.",
