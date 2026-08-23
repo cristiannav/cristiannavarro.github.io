@@ -132,7 +132,14 @@ export const projects: Project[] = [
     description:
       "Aplicación de swap donde matcheas con personas que tienen prendas que te interesan y viceversa.",
     impact: "https://swapstyle-prod.vercel.app",
-    stack: ["React", "Tailwind CSS", "Node JS", "NestJS", "PostgreSQL"],
+    stack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node JS",
+      "NestJS",
+      "PostgreSQL",
+    ],
     image: "/images/swapstyle.png",
   },
   {
