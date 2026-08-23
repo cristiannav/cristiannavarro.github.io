@@ -21,7 +21,7 @@ export function Projects() {
                 <h3 className="text-xl font-semibold text-white">{p.title}</h3>
                 <p className="mt-2 text-slate-300">{p.description}</p>
                 {p.impact.includes("https://") ? (
-                  <p className="mt-7 text-sm text-neon-cyan">
+                  <p className="mt-3 text-sm text-neon-cyan">
                     <span className="text-slate-300">
                       <a
                         href={projects[i].impact}
