@@ -8,7 +8,7 @@ import type {
 
 export const profile: Profile = {
   name: "Cristian Navarro",
-  role: "Full Stack Developer",
+  role: "Senior Full Stack Developer",
   location: "Buenos Aires — Argentina",
   github: "https://github.com/cristiannav",
   linkedin: "https://linkedin.com/in/cristian-navarro",
