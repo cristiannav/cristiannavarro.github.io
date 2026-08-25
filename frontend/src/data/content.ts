@@ -30,7 +30,7 @@ export const skills: SkillCategory[] = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "Nest JS", "Python", "Java"],
+    items: ["Node.js", "Express.js", "Nest.js", "Python", "Java"],
   },
   { category: "Bases de datos", items: ["SQL Server", "MySQL"] },
   {
@@ -69,7 +69,7 @@ export const experience: Experience[] = [
       "TypeScript",
       "Node.js",
       "Express.js",
-      "Nest JS",
+      "Nest.js",
       "Java",
       "SQL Server",
       "Docker",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Node.js",
-      "NestJS",
+      "Nest.js",
       "PostgreSQL",
     ],
     image: "/images/swapstyle.png",
