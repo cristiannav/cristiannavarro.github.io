@@ -30,7 +30,7 @@ export const skills: SkillCategory[] = [
   },
   {
     category: "Backend",
-    items: ["Node JS", "Express JS", "Nest JS", "Python", "Java"],
+    items: ["Node.js", "Express.js", "Nest JS", "Python", "Java"],
   },
   { category: "Bases de datos", items: ["SQL Server", "MySQL"] },
   {
@@ -67,8 +67,8 @@ export const experience: Experience[] = [
     stack: [
       "React",
       "TypeScript",
-      "Node JS",
-      "Express JS",
+      "Node.js",
+      "Express.js",
       "Nest JS",
       "Java",
       "SQL Server",
@@ -136,7 +136,7 @@ export const projects: Project[] = [
       "React",
       "TypeScript",
       "Tailwind CSS",
-      "Node JS",
+      "Node.js",
       "NestJS",
       "PostgreSQL",
     ],
@@ -156,7 +156,7 @@ export const projects: Project[] = [
     description:
       "Mapa de camas que permite a médicos y enfermeros conocer el nivel de riesgo clínico del paciente internado y su estado de COVID-19.",
     impact: "Atención clínica más ágil y priorizada en plena pandemia.",
-    stack: ["React", "Node JS", "Express JS", "SQL Server"],
+    stack: ["React", "Node.js", "Express.js", "SQL Server"],
     image: "/images/score-news.jpg",
   },
   {
@@ -165,7 +165,7 @@ export const projects: Project[] = [
       "Sistema que identifica proactivamente pacientes aptos para el alta.",
     impact:
       "Mejora de la eficiencia operativa y optimización de recursos hospitalarios.",
-    stack: ["React", "Node JS", "Express JS", "SQL Server"],
+    stack: ["React", "Node.js", "Express.js", "SQL Server"],
     image: "/images/altas.jpg",
   },
   {
@@ -186,7 +186,7 @@ export const education: Education[] = [
   },
   {
     institution: "Digital House",
-    title: "React JS",
+    title: "React",
     period: "Feb 2018 — Abr 2018",
   },
   {
