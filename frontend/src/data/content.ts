@@ -202,7 +202,7 @@ export const education: Education[] = [
   {
     institution: "Universidad Argentina de la Empresa (UADE)",
     title: "Lic. en Gestión de Tecnología de la Información",
-    period: "Mar 2019 — Actualidad",
+    period: "Mar 2019 — Presente",
   },
   {
     institution: "Digital House",
