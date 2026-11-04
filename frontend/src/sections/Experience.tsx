@@ -5,7 +5,11 @@ import { useT } from "../i18n";
 export function Experience() {
   const { t, experience } = useT();
   return (
-    <Section id="experience" eyebrow={t.experience.eyebrow} title={t.experience.title}>
+    <Section
+      id="experience"
+      eyebrow={t.experience.eyebrow}
+      title={t.experience.title}
+    >
       <div className="relative space-y-10 border-l border-white/10 pl-8">
         {experience.map((exp, i) => (
           <Reveal key={exp.company} delay={i * 0.05}>
@@ -17,7 +21,7 @@ export function Experience() {
                 </h3>
               </div>
               <p className="text-neon-cyan">
-                {exp.role} · {exp.location}
+                {exp.role} | {exp.period}, {exp.location}
               </p>
               <ul className="mt-3 list-disc space-y-1 pl-5 text-slate-300">
                 {exp.bullets.map((b) => (

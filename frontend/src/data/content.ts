@@ -54,6 +54,26 @@ export const skills: SkillCategory[] = [
 
 export const experience: Experience[] = [
   {
+    company: "Freelancer",
+    role: "Desarrollador Full Stack",
+    period: "Ago 2025 — Presente",
+    location: "Buenos Aires",
+    bullets: [
+      "Me especializo en el diseño y desarrollo de aplicaciones web modernas y escalables. Experiencia construyendo soluciones end-to-end con React.js, TypeScript, JavaScript, HTML5, CSS3 y Tailwind CSS en el frontend, y Node.js, Express.js y Nest.js en el backend. Sólidos conocimientos en Microsoft SQL Server, Linux (Debian y Red Hat), Git, Docker y Claude Code. Comprometido con las buenas prácticas de desarrollo para entregar soluciones confiables que generen valor de negocio.",
+    ],
+    stack: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "Nest.js",
+      "MySQL",
+      "Docker",
+      "Claude Code",
+    ],
+  },
+  {
     company: "Swiss Medical Group",
     role: "Desarrollador Full Stack",
     period: "Sept 2019 — Ago 2025",
@@ -80,7 +100,7 @@ export const experience: Experience[] = [
   {
     company: "Erictel Argentina",
     role: "Desarrollador Frontend",
-    period: "Sept 2018 — May 2019",
+    period: "Sept 2018 — Ago 2019",
     location: "CABA",
     bullets: [
       "Desarrollo del sistema DashPro para monitorear el uso de dispositivos IoT en el sector de la agroindustria.",
@@ -115,7 +135,7 @@ export const experience: Experience[] = [
   {
     company: "Sonda",
     role: "Analista de Soporte Técnico / Mesa de Ayuda",
-    period: "Ene 2012 — Feb 2014",
+    period: "Ene 2012 — Oct 2015",
     location: "CABA",
     bullets: [
       "Creación y administración de tickets; soporte de primer y segundo nivel, remoto y on-site.",
@@ -227,7 +247,18 @@ const skillCategoriesEn = [
   "Agile methodologies",
 ];
 
-const experienceEn: Pick<Experience, "role" | "period" | "location" | "bullets">[] = [
+const experienceEn: Pick<
+  Experience,
+  "role" | "period" | "location" | "bullets"
+>[] = [
+  {
+    role: "Full Stack Developer",
+    period: "Aug 2025 — Present",
+    location: "Buenos Aires",
+    bullets: [
+      "I specialize in designing and developing modern, scalable web applications. Experience building end-to-end solutions with React.js, TypeScript, JavaScript, HTML5, CSS3 and Tailwind CSS on the front end, and Node.js, Express.js and Nest.js on the back end. Strong knowledge of Microsoft SQL Server, Linux (Debian and Red Hat), Git, Docker and Claude Code. Committed to development best practices to deliver reliable solutions that create business value.",
+    ],
+  },
   {
     role: "Full Stack Developer",
     period: "Sep 2019 — Aug 2025",
@@ -241,7 +272,7 @@ const experienceEn: Pick<Experience, "role" | "period" | "location" | "bullets">
   },
   {
     role: "Frontend Developer",
-    period: "Sep 2018 — May 2019",
+    period: "Sep 2018 — Aug 2019",
     location: "Buenos Aires",
     bullets: [
       "Developed the DashPro system to monitor IoT device usage in the agribusiness sector.",
@@ -270,7 +301,7 @@ const experienceEn: Pick<Experience, "role" | "period" | "location" | "bullets">
   },
   {
     role: "Technical Support / Help Desk Analyst",
-    period: "Jan 2012 — Feb 2014",
+    period: "Jan 2012 — Oct 2015",
     location: "Buenos Aires",
     bullets: [
       "Created and managed tickets; first and second-level support, remote and on-site.",
@@ -291,7 +322,8 @@ const projectsEn: Pick<Project, "title" | "description" | "impact">[] = [
     title: "SMG Parking",
     description:
       "An application to log vehicle entries and exits at the company's own hospitals.",
-    impact: "Centralized, traceable control of vehicle flow across multiple sites.",
+    impact:
+      "Centralized, traceable control of vehicle flow across multiple sites.",
   },
   {
     title: "Score NEWS",
@@ -301,7 +333,8 @@ const projectsEn: Pick<Project, "title" | "description" | "impact">[] = [
   },
   {
     title: "Early medical discharge detection",
-    description: "A system that proactively identifies patients ready for discharge.",
+    description:
+      "A system that proactively identifies patients ready for discharge.",
     impact: "Improved operational efficiency and optimized hospital resources.",
   },
   {
@@ -313,12 +346,18 @@ const projectsEn: Pick<Project, "title" | "description" | "impact">[] = [
 ];
 
 const educationEn: Pick<Education, "title" | "period">[] = [
-  { title: "B.S. in Information Technology Management", period: "Mar 2019 — Present" },
+  {
+    title: "B.S. in Information Technology Management",
+    period: "Mar 2019 — Present",
+  },
   { title: "React", period: "Feb 2018 — Apr 2018" },
   { title: "Full Stack Web Development", period: "Jul 2017 — Dec 2017" },
   { title: "Associate Degree in Programming", period: "Mar 2014 — Dec 2015" },
   { title: "Advanced Linux Administration", period: "Nov 2013 — Mar 2014" },
-  { title: "Advanced Specialization in GNU/Linux", period: "Mar 2011 — Dec 2011" },
+  {
+    title: "Advanced Specialization in GNU/Linux",
+    period: "Mar 2011 — Dec 2011",
+  },
 ];
 
 export const content = {
