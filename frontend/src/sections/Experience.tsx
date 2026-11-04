@@ -1,10 +1,11 @@
 import { Section } from "../components/Section";
 import { Reveal } from "../components/Reveal";
-import { experience } from "../data/content";
+import { useT } from "../i18n";
 
 export function Experience() {
+  const { t, experience } = useT();
   return (
-    <Section id="experience" eyebrow="Trayectoria" title="Experiencia">
+    <Section id="experience" eyebrow={t.experience.eyebrow} title={t.experience.title}>
       <div className="relative space-y-10 border-l border-white/10 pl-8">
         {experience.map((exp, i) => (
           <Reveal key={exp.company} delay={i * 0.05}>

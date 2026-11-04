@@ -1,13 +1,14 @@
 import { Section } from '../components/Section';
 import { Reveal } from '../components/Reveal';
-import { skills } from '../data/content';
+import { useT } from '../i18n';
 
 export function Skills() {
+  const { t, skills } = useT();
   return (
-    <Section id="skills" eyebrow="Stack técnico" title="Skills">
+    <Section id="skills" eyebrow={t.skills.eyebrow} title={t.skills.title}>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {skills.map((cat, i) => (
-          <Reveal key={cat.category} delay={i * 0.05}>
+          <Reveal key={i} delay={i * 0.05}>
             <div className="glass h-full rounded-2xl p-6 transition hover:shadow-glow">
               <h3 className="mb-4 text-lg font-semibold text-white">{cat.category}</h3>
               <ul className="flex flex-wrap gap-2">

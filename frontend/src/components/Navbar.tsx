@@ -1,17 +1,13 @@
 import { useState } from "react";
+import { toggleLang, useT } from "../i18n";
 
-const links = [
-  { href: "#about", label: "Sobre mí" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experiencia" },
-  { href: "#projects", label: "Proyectos" },
-  { href: "#education", label: "Educación" },
-  { href: "#contact", label: "Contacto" },
-];
+const sections = ["about", "skills", "experience", "projects", "education", "contact"] as const;
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
+  const { lang, t } = useT();
+  const links = sections.map((id) => ({ href: `#${id}`, label: t.nav[id] }));
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 glass">
@@ -38,11 +34,23 @@ export function Navbar() {
           ))}
         </ul>
 
+        <div className="flex items-center gap-2">
+        {/* Selector de idioma */}
+        <button
+          type="button"
+          onClick={toggleLang}
+          aria-label={t.nav.switchLang}
+          title={t.nav.switchLang}
+          className="rounded-full border border-white/10 px-3 py-1 text-xs font-medium text-slate-200 transition hover:border-neon-cyan/50 hover:text-neon-cyan"
+        >
+          {lang === "es" ? "EN" : "ES"}
+        </button>
+
         {/* Botón hamburguesa (solo mobile) */}
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
           aria-expanded={open}
           aria-controls="mobile-menu"
           className="inline-flex items-center justify-center rounded-md p-2 text-slate-200 transition hover:text-neon-cyan md:hidden"
@@ -65,6 +73,7 @@ export function Navbar() {
             )}
           </svg>
         </button>
+        </div>
       </nav>
 
       {/* Panel de navegación móvil */}

@@ -210,3 +210,124 @@ export const education: Education[] = [
     period: "Mar 2011 — Dic 2011",
   },
 ];
+
+// English version: only translated fields; the rest (stack, links, images) is reused from Spanish by index.
+const profileEn: Profile = {
+  ...profile,
+  summary:
+    "Over 6 years of experience as a Full Stack developer and over 10 years in the IT industry. I have taken part in multiple software engineering projects, building in-house company applications from scratch, and supporting applications on Linux servers across different environments, always using agile methodologies. Analytical and detail-oriented, focused on dynamism and timely process management aligned with business strategy.",
+};
+
+const skillCategoriesEn = [
+  "Frontend",
+  "Backend",
+  "Databases",
+  "Operating systems",
+  "Tools",
+  "Agile methodologies",
+];
+
+const experienceEn: Pick<Experience, "role" | "period" | "location" | "bullets">[] = [
+  {
+    role: "Full Stack Developer",
+    period: "Sep 2019 — Aug 2025",
+    location: "Buenos Aires",
+    bullets: [
+      "Developed improvements and new requirements for SMG Parking, an app that logs vehicle entries/exits at the company's hospitals.",
+      "Implemented the Score NEWS system: a bed map showing clinical risk level and COVID-19 status for faster patient care.",
+      "Developed an early medical discharge detection system to optimize hospital resources and service quality.",
+      "Developed phone number management (create/update/delete) for providers through a WhatsApp chatbot.",
+    ],
+  },
+  {
+    role: "Frontend Developer",
+    period: "Sep 2018 — May 2019",
+    location: "Buenos Aires",
+    bullets: [
+      "Developed the DashPro system to monitor IoT device usage in the agribusiness sector.",
+      "LAMP installation and virtualization for local development.",
+      "Worked with agile methodologies, testing and solution documentation.",
+    ],
+  },
+  {
+    role: "2017 Delegation Member",
+    period: "Nov 2017",
+    location: "Israel",
+    bullets: [
+      "Visited the Start-Up Nation and the main innovation hubs of the Israeli entrepreneurial ecosystem.",
+      "Visited venture capital funds and accelerators.",
+    ],
+  },
+  {
+    role: "Application Support Analyst",
+    period: "Nov 2015 — Mar 2017",
+    location: "Buenos Aires",
+    bullets: [
+      "Resolved second-level incidents for the mobile app area.",
+      "Supported Red Hat 6.5 servers across different environments and performed log analysis.",
+      "Scrum and Kanban methodologies; solution documentation.",
+    ],
+  },
+  {
+    role: "Technical Support / Help Desk Analyst",
+    period: "Jan 2012 — Feb 2014",
+    location: "Buenos Aires",
+    bullets: [
+      "Created and managed tickets; first and second-level support, remote and on-site.",
+      "Password management through Novell and Active Directory.",
+      "Error diagnosis with Process Monitor and solution documentation.",
+    ],
+  },
+];
+
+const projectsEn: Pick<Project, "title" | "description" | "impact">[] = [
+  {
+    title: "SwapStyle",
+    description:
+      "A swap app where you match with people who have clothes you like, and vice versa.",
+    impact: "https://swapstyle-prod.vercel.app",
+  },
+  {
+    title: "SMG Parking",
+    description:
+      "An application to log vehicle entries and exits at the company's own hospitals.",
+    impact: "Centralized, traceable control of vehicle flow across multiple sites.",
+  },
+  {
+    title: "Score NEWS",
+    description:
+      "A bed map that lets doctors and nurses see the clinical risk level of inpatients and their COVID-19 status.",
+    impact: "Faster, prioritized clinical care during the pandemic.",
+  },
+  {
+    title: "Early medical discharge detection",
+    description: "A system that proactively identifies patients ready for discharge.",
+    impact: "Improved operational efficiency and optimized hospital resources.",
+  },
+  {
+    title: "Phone management via WhatsApp chatbot",
+    description:
+      "Lets providers add, update or remove their phone number through a WhatsApp chatbot.",
+    impact: "Customer self-service and reduced manual operational workload.",
+  },
+];
+
+const educationEn: Pick<Education, "title" | "period">[] = [
+  { title: "B.S. in Information Technology Management", period: "Mar 2019 — Present" },
+  { title: "React", period: "Feb 2018 — Apr 2018" },
+  { title: "Full Stack Web Development", period: "Jul 2017 — Dec 2017" },
+  { title: "Associate Degree in Programming", period: "Mar 2014 — Dec 2015" },
+  { title: "Advanced Linux Administration", period: "Nov 2013 — Mar 2014" },
+  { title: "Advanced Specialization in GNU/Linux", period: "Mar 2011 — Dec 2011" },
+];
+
+export const content = {
+  es: { profile, skills, experience, projects, education },
+  en: {
+    profile: profileEn,
+    skills: skills.map((s, i) => ({ ...s, category: skillCategoriesEn[i] })),
+    experience: experience.map((e, i) => ({ ...e, ...experienceEn[i] })),
+    projects: projects.map((p, i) => ({ ...p, ...projectsEn[i] })),
+    education: education.map((e, i) => ({ ...e, ...educationEn[i] })),
+  },
+};

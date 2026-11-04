@@ -1,13 +1,14 @@
 import { Section } from "../components/Section";
 import { Reveal } from "../components/Reveal";
-import { projects } from "../data/content";
+import { useT } from "../i18n";
 
 export function Projects() {
+  const { t, projects } = useT();
   return (
-    <Section id="projects" eyebrow="Casos reales" title="Proyectos">
+    <Section id="projects" eyebrow={t.projects.eyebrow} title={t.projects.title}>
       <div className="grid gap-8 md:grid-cols-2">
         {projects.map((p, i) => (
-          <Reveal key={p.title} delay={i * 0.05}>
+          <Reveal key={p.image} delay={i * 0.05}>
             <article className="group glass h-full overflow-hidden rounded-2xl transition hover:shadow-glow-violet">
               <div className="h-48 overflow-hidden">
                 <img
@@ -24,7 +25,7 @@ export function Projects() {
                   <p className="mt-3 text-sm text-neon-cyan">
                     <span className="text-slate-300">
                       <a
-                        href={projects[i].impact}
+                        href={p.impact}
                         target="_blank"
                         rel="noreferrer"
                         className="text-neon-cyan hover:underline"
@@ -35,7 +36,7 @@ export function Projects() {
                   </p>
                 ) : (
                   <p className="mt-3 text-sm text-neon-cyan">
-                    Impacto: <span className="text-slate-300">{p.impact}</span>
+                    {t.projects.impact} <span className="text-slate-300">{p.impact}</span>
                   </p>
                 )}
                 <div className="mt-4 flex flex-wrap gap-2">

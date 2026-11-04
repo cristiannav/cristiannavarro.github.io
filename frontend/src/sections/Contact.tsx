@@ -2,25 +2,24 @@ import { useState, type FormEvent } from "react";
 import { Section } from "../components/Section";
 import { sendContact } from "../lib/api";
 import EarthCanvas from "../components/EarthCanvas";
+import { useT } from "../i18n";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
-  const [error, setError] = useState("");
+  const { t } = useT();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     setStatus("loading");
-    setError("");
     try {
       await sendContact(form);
       setStatus("success");
       setForm({ name: "", email: "", message: "" });
-    } catch (err) {
+    } catch {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "Error inesperado");
     }
   }
 
@@ -30,10 +29,10 @@ export function Contact() {
         {/* Encabezado + formulario: debajo del globo en mobile, izquierda en desktop */}
         <div className="order-2 md:order-1">
           <p className="mb-2 text-sm font-medium uppercase tracking-widest text-neon-cyan">
-            Hablemos
+            {t.contact.eyebrow}
           </p>
           <h2 className="mb-8 text-3xl font-bold text-white sm:text-4xl">
-            Contacto
+            {t.contact.title}
           </h2>
           <form
             onSubmit={handleSubmit}
@@ -41,7 +40,7 @@ export function Contact() {
           >
           <div>
             <label htmlFor="contact-name" className="sr-only">
-              Nombre
+              {t.contact.name}
             </label>
             <input
               id="contact-name"
@@ -49,7 +48,7 @@ export function Contact() {
               autoComplete="name"
               required
               minLength={2}
-              placeholder="Nombre"
+              placeholder={t.contact.name}
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               className="w-full rounded-lg border border-white/10 bg-base-900 px-4 py-3 text-white outline-none focus:border-neon-cyan"
@@ -57,7 +56,7 @@ export function Contact() {
           </div>
           <div>
             <label htmlFor="contact-email" className="sr-only">
-              Email
+              {t.contact.email}
             </label>
             <input
               id="contact-email"
@@ -65,7 +64,7 @@ export function Contact() {
               autoComplete="email"
               required
               type="email"
-              placeholder="Email"
+              placeholder={t.contact.email}
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full rounded-lg border border-white/10 bg-base-900 px-4 py-3 text-white outline-none focus:border-neon-cyan"
@@ -73,7 +72,7 @@ export function Contact() {
           </div>
           <div>
             <label htmlFor="contact-message" className="sr-only">
-              Mensaje
+              {t.contact.message}
             </label>
             <textarea
               id="contact-message"
@@ -81,7 +80,7 @@ export function Contact() {
               required
               minLength={10}
               rows={5}
-              placeholder="Mensaje"
+              placeholder={t.contact.message}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               className="w-full rounded-lg border border-white/10 bg-base-900 px-4 py-3 text-white outline-none focus:border-neon-cyan"
@@ -92,15 +91,15 @@ export function Contact() {
             disabled={status === "loading"}
             className="w-full rounded-lg bg-gradient-to-r from-neon-cyan to-neon-violet px-6 py-3 font-medium text-base-950 transition hover:scale-[1.02] disabled:opacity-50"
           >
-            {status === "loading" ? "Enviando…" : "Enviar mensaje"}
+            {status === "loading" ? t.contact.sending : t.contact.send}
           </button>
           {status === "success" && (
             <p className="text-sm text-emerald-400">
-              ¡Mensaje enviado! Te respondo pronto.
+              {t.contact.success}
             </p>
           )}
           {status === "error" && (
-            <p className="text-sm text-red-400">{error}</p>
+            <p className="text-sm text-red-400">{t.contact.error}</p>
           )}
           </form>
         </div>

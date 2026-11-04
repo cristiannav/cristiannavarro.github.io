@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { HeroCanvas } from "../three/HeroCanvas";
-import { profile } from "../data/content";
+import { useT } from "../i18n";
 
 export function Hero() {
+  const { t, profile } = useT();
   return (
     <section
       id="hero"
@@ -32,7 +33,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mx-auto mt-6 max-w-xl text-lg text-slate-300"
         >
-          Construyo aplicaciones full stack robustas, del frontend al backend.
+          {t.hero.tagline}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,13 +45,13 @@ export function Hero() {
             href="#projects"
             className="rounded-full bg-gradient-to-r from-neon-cyan to-neon-violet px-6 py-3 font-medium text-base-950 shadow-glow transition hover:scale-105"
           >
-            Ver proyectos
+            {t.hero.seeProjects}
           </a>
           <a
             href="#contact"
             className="rounded-full glass px-6 py-3 font-medium text-white transition hover:border-neon-cyan/50"
           >
-            Contactame
+            {t.hero.contactMe}
           </a>
         </motion.div>
       </div>
