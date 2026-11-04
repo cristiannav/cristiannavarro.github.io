@@ -43,7 +43,7 @@ export function Hero() {
         >
           <a
             href="#projects"
-            className="rounded-full bg-gradient-to-r from-neon-cyan to-neon-violet px-6 py-3 font-medium text-base-950 shadow-glow transition hover:scale-105"
+            className="rounded-full bg-gradient-to-r from-neon-cyan to-neon-blue px-6 py-3 font-medium text-base-950 shadow-glow transition hover:scale-105"
           >
             {t.hero.seeProjects}
           </a>

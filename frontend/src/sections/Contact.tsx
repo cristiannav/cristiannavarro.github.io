@@ -38,69 +38,67 @@ export function Contact() {
             onSubmit={handleSubmit}
             className="glass space-y-4 rounded-2xl p-6"
           >
-          <div>
-            <label htmlFor="contact-name" className="sr-only">
-              {t.contact.name}
-            </label>
-            <input
-              id="contact-name"
-              name="name"
-              autoComplete="name"
-              required
-              minLength={2}
-              placeholder={t.contact.name}
-              value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full rounded-lg border border-white/10 bg-base-900 px-4 py-3 text-white outline-none focus:border-neon-cyan"
-            />
-          </div>
-          <div>
-            <label htmlFor="contact-email" className="sr-only">
-              {t.contact.email}
-            </label>
-            <input
-              id="contact-email"
-              name="email"
-              autoComplete="email"
-              required
-              type="email"
-              placeholder={t.contact.email}
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full rounded-lg border border-white/10 bg-base-900 px-4 py-3 text-white outline-none focus:border-neon-cyan"
-            />
-          </div>
-          <div>
-            <label htmlFor="contact-message" className="sr-only">
-              {t.contact.message}
-            </label>
-            <textarea
-              id="contact-message"
-              name="message"
-              required
-              minLength={10}
-              rows={5}
-              placeholder={t.contact.message}
-              value={form.message}
-              onChange={(e) => setForm({ ...form, message: e.target.value })}
-              className="w-full rounded-lg border border-white/10 bg-base-900 px-4 py-3 text-white outline-none focus:border-neon-cyan"
-            />
-          </div>
-          <button
-            type="submit"
-            disabled={status === "loading"}
-            className="w-full rounded-lg bg-gradient-to-r from-neon-cyan to-neon-violet px-6 py-3 font-medium text-base-950 transition hover:scale-[1.02] disabled:opacity-50"
-          >
-            {status === "loading" ? t.contact.sending : t.contact.send}
-          </button>
-          {status === "success" && (
-            <p className="text-sm text-emerald-400">
-              {t.contact.success}
-            </p>
-          )}
-          {status === "error" && (
-            <p className="text-sm text-red-400">{t.contact.error}</p>
-          )}
+            <div>
+              <label htmlFor="contact-name" className="sr-only">
+                {t.contact.name}
+              </label>
+              <input
+                id="contact-name"
+                name="name"
+                autoComplete="name"
+                required
+                minLength={2}
+                placeholder={t.contact.name}
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                className="w-full rounded-lg border border-white/10 bg-base-900 px-4 py-3 text-white outline-none focus:border-neon-cyan"
+              />
+            </div>
+            <div>
+              <label htmlFor="contact-email" className="sr-only">
+                {t.contact.email}
+              </label>
+              <input
+                id="contact-email"
+                name="email"
+                autoComplete="email"
+                required
+                type="email"
+                placeholder={t.contact.email}
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                className="w-full rounded-lg border border-white/10 bg-base-900 px-4 py-3 text-white outline-none focus:border-neon-cyan"
+              />
+            </div>
+            <div>
+              <label htmlFor="contact-message" className="sr-only">
+                {t.contact.message}
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                required
+                minLength={10}
+                rows={5}
+                placeholder={t.contact.message}
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                className="w-full rounded-lg border border-white/10 bg-base-900 px-4 py-3 text-white outline-none focus:border-neon-cyan"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="w-full rounded-lg bg-gradient-to-r from-neon-cyan to-neon-blue px-6 py-3 font-medium text-base-950 transition hover:scale-[1.02] disabled:opacity-50"
+            >
+              {status === "loading" ? t.contact.sending : t.contact.send}
+            </button>
+            {status === "success" && (
+              <p className="text-sm text-emerald-400">{t.contact.success}</p>
+            )}
+            {status === "error" && (
+              <p className="text-sm text-red-400">{t.contact.error}</p>
+            )}
           </form>
         </div>
         {/* Globo: arriba en mobile, derecha en desktop */}

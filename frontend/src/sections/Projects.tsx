@@ -5,11 +5,15 @@ import { useT } from "../i18n";
 export function Projects() {
   const { t, projects } = useT();
   return (
-    <Section id="projects" eyebrow={t.projects.eyebrow} title={t.projects.title}>
+    <Section
+      id="projects"
+      eyebrow={t.projects.eyebrow}
+      title={t.projects.title}
+    >
       <div className="grid gap-8 md:grid-cols-2">
         {projects.map((p, i) => (
           <Reveal key={p.image} delay={i * 0.05}>
-            <article className="group glass h-full overflow-hidden rounded-2xl transition hover:shadow-glow-violet">
+            <article className="group glass h-full overflow-hidden rounded-2xl transition hover:shadow-glow-blue">
               <div className="h-48 overflow-hidden">
                 <img
                   src={p.image}
@@ -36,7 +40,8 @@ export function Projects() {
                   </p>
                 ) : (
                   <p className="mt-3 text-sm text-neon-cyan">
-                    {t.projects.impact} <span className="text-slate-300">{p.impact}</span>
+                    {t.projects.impact}{" "}
+                    <span className="text-slate-300">{p.impact}</span>
                   </p>
                 )}
                 <div className="mt-4 flex flex-wrap gap-2">
