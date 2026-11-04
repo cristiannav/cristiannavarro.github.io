@@ -8,15 +8,18 @@ import helmet from 'helmet';
 // 1. Crea una instancia de Express
 const server = express();
 
-// Orígenes permitidos para CORS. En producción se setea FRONTEND_ORIGIN
-// (lista separada por comas) en las variables de entorno de Vercel.
+// Orígenes permitidos para CORS: el sitio publicado y desarrollo local, más
+// los que se agreguen en FRONTEND_ORIGIN (lista separada por comas).
 function allowedOrigins(): string[] {
-  const fromEnv = process.env.FRONTEND_ORIGIN;
-  if (fromEnv) return fromEnv.split(',').map((o) => o.trim()).filter(Boolean);
+  const fromEnv = (process.env.FRONTEND_ORIGIN ?? '')
+    .split(',')
+    .map((o) => o.trim().replace(/\/$/, ''))
+    .filter(Boolean);
   return [
-    'https://cristiannavarro-github-io.vercel.app',
+    'https://cristiannavarro.vercel.app',
     'http://localhost:5173',
-    'http://localhost:5174',
+    'http://localhost:4173',
+    ...fromEnv,
   ];
 }
 
